@@ -1,0 +1,39 @@
+﻿use db_university;
+
+
+select *
+from students s
+WHERE date_of_birth BETWEEN "1990-01-01" AND "1990-12-31"
+order BY date_of_birth ASC;
+
+
+select *
+FROM courses c
+WHERE cfu > "10";
+
+
+select *
+from students s
+WHERE date_of_birth <= "1994-01-01";
+
+
+select *
+FROM courses c
+WHERE period = "I semestre" AND `year` = 1;
+
+
+select *
+FROM exams e
+where date = "2020-06-20" AND hour > "14:00:00";
+
+
+SELECT *
+from degrees d
+WHERE `level` = "magistrale";
+
+
+SELECT *
+FROM departments d ;
+select *
+FROM teachers t
+where phone IS NULL ;
