@@ -1,0 +1,14 @@
+use db_university;
+
+# Selezionare tutti gli studenti iscritti al Corso di Laurea in Economia
+SELECT *
+FROM students s 
+join degrees deg on s.degree_id = deg.id
+WHERE deg.name like "%Economia%";
+
+# Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
+SELECT *
+FROM degrees deg
+join courses c  on deg.id = c.degree_id
+join course_teacher ct on c.id = ct.course_id 
+join teachers t on ct.teacher_id = t.id ;
