@@ -9,7 +9,9 @@ ORDER BY enrolment_year;
 # Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 SELECT office_address, COUNT(*) AS t_number
 FROM teachers t
-group by office_address;
+group by office_address
+HAVING t_number > 1
+ORDER BY t_number;
 
 # Calcolare la media dei voti di ogni appello d'esame
 SELECT e.`date`, e.id, AVG(es.vote) AS media
