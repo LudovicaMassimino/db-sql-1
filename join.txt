@@ -4,7 +4,7 @@ use db_university;
 SELECT *
 FROM students s 
 join degrees deg on s.degree_id = deg.id
-WHERE deg.name like "%Economia%";
+WHERE deg.name like "%Economia%"; # oppure WHERE deg.name = "Corso di Laurea in Economia";
 
 # Selezionare tutti i corsi di laurea con i relativi corsi e insegnanti
 SELECT *
